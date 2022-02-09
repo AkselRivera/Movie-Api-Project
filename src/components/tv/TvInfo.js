@@ -4,14 +4,13 @@ import { apiConfig } from '../../api/apiConfig';
 import { useFetchMovie } from '../../hooks/useFetchMovie';
 import { TvSeason } from './TvSeason';
 
+import defaultBackground from '../../img/notFound.jpg';
+
 export const TvInfo = () => {
 
     const {id}= useParams();
     const {data}=useFetchMovie(`https://api.themoviedb.org/3/tv/${id}?api_key=fd922be3276e0c686293e46cf44f0e9e&language=en`);
     // const {data:{results}}= useFetchMovie(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=fd922be3276e0c686293e46cf44f0e9e`);
-    const results=undefined;
-
-    console.log(data);
 
     if(data.backdrop_path===null)
     data.backdrop_path= data.poster_path;
@@ -35,7 +34,7 @@ return (
         opacity:'.5'
         
     }} > */}
-        <img src={apiConfig.originalImage(data.backdrop_path) } 
+        <img src={!!data.backdrop_path ?apiConfig.originalImage(data.backdrop_path) : defaultBackground } 
                 alt={data.name}
                 style={{ width:'100%',opacity:'.4'}}
                 className='fondoMovie' />
@@ -43,9 +42,12 @@ return (
         <div className=' text-white texto-encima' >
 
             <div className='texto-izquierda'>
-            <img src={apiConfig.w500(data.poster_path) }
+            {
+            !!data.poster_path &&
+                <img src={apiConfig.w500(data.poster_path) }
                 style={{width:'262px', height:'393px'}}
                 alt={data.name}/>
+            }
             </div>
 
             <div className='texto-derecha'>

@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { apiConfig } from '../../api/apiConfig';
 import { useFetchMovie } from '../../hooks/useFetchMovie';
 
-import defaultImage from '../../img/noResults.png';
 import defaultBackground from '../../img/notFound.jpg';
 
 export const MovieInfo = () => {
@@ -13,9 +12,6 @@ export const MovieInfo = () => {
     const {data}=useFetchMovie(`https://api.themoviedb.org/3/movie/${id}?api_key=fd922be3276e0c686293e46cf44f0e9e&language=en`);
     const {data:{results}}= useFetchMovie(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=fd922be3276e0c686293e46cf44f0e9e`);
     
-    if (results!==undefined) {
-        console.log(results);
-    }
 
 
     

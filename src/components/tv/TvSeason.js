@@ -17,7 +17,7 @@ export const TvSeason = ({ id,air_date,name, overview,episode_count,poster_path,
     
     <div className='col'>
         {/* <div className="conta"> */}
-            <div className='card text-center h-100 text-white bg-dark'
+            <div className='card text-center h-100 text-white bg-dark mt-2'
                 onClick={handleClickTv}>
 
                 {/* <div className="overlay">
@@ -30,10 +30,10 @@ export const TvSeason = ({ id,air_date,name, overview,episode_count,poster_path,
                 <div className="card-body ">
                     <h5 className='card-title'>{  name }</h5>
                     <p className='card-text' style={{fontSize:'1vw',textAlign:'justify' }} > {overview} </p>
+                    <p className='card-text'>Episodes: {episode_count} </p>
+                    <small> {air_date} </small>
                 </div>
                 <div className="card-footer text-muted">
-                    <p>Episodes: {episode_count} </p>
-                    <small> {air_date} </small>
                 </div>
 
                 

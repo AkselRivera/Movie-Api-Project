@@ -23,7 +23,6 @@ export const HomeScreen = () => {
   const {data:UpComingMovie}=useFetch('https://api.themoviedb.org/3/movie/upcoming?api_key=fd922be3276e0c686293e46cf44f0e9e&language=en-US&page=1');
   
   
-  console.log(trendingPeople);
   const bk={
                       
     // when window width is >= 320px

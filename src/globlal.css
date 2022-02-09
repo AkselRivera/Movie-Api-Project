@@ -2,6 +2,11 @@ html,body{
     margin: 0;
     border: 0;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 a:hover{
  cursor: pointer;
 }

@@ -29,7 +29,6 @@ function MovieScreen() {
   },[search, movie.page, SearchMovie.page, dispatch])
   
   const data= useFetch(url ) ;
-  console.log(data);
 
   const handleIncrement=()=>{
     window.scrollTo(0,0);

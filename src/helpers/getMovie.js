@@ -6,7 +6,6 @@ export const getMovie=async ( url)=>{
     const resp = await fetch(url);
     const body= await resp.json();
 
-    console.log(body);
         const movie= body
     
     //  .map*
