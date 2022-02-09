@@ -1,0 +1,126 @@
+.contain{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+}
+
+.sidenavR {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    background-color: #000;
+    width: 40%;
+    height: 100%;
+    
+    
+}
+
+.sidenavR{
+    background-image: url('../../img/login2.jpg');
+    object-fit: cover;
+}
+
+
+
+.mainR {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    padding:12%;
+}
+
+@media (max-width: 730px ) {
+    
+    .contain{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
+
+
+    .mainR{
+        width: 100%;
+        height: 60%;
+    }
+    
+    
+    .sidenavR{
+        width: 100%;
+        height: 40%;
+    }
+
+}
+
+
+@media (max-width: 450px ) {
+
+    .sidenavR{
+        padding: 0%;
+        text-align: center;
+
+    }
+    .sidenav .tituloR{
+        font-size: .8rem;
+    }
+
+    .sidenav p{
+        font-size: .8rem;
+    }
+    
+}
+/* 
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+} */

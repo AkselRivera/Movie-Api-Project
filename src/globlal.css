@@ -1,0 +1,161 @@
+html,body{
+    margin: 0;
+    border: 0;
+}
+a:hover{
+ cursor: pointer;
+}
+
+.navbar{
+    font-size: 1.3rem;
+}
+
+.navbar button{
+    border: none;
+}
+
+.navbar .nav-link{
+    padding: .5rem;
+}
+
+
+.userPhoto{
+    border-radius: 100%;
+    height: 35px;
+}
+
+.act{
+    text-decoration: underline;
+}
+
+.card:hover{
+
+    cursor: pointer;
+}
+.titulo{
+    font-size: 1.8rem;
+    vertical-align: center;
+}
+
+@media (max-width: 675px ) {
+    .navbar{
+        font-size: 1rem;
+    }
+
+    .titulo{
+        font-size: 1.5rem;
+    }
+
+    .userPhoto{
+        height: 30px;
+    }
+
+    .navbar button{
+        padding: 5px;
+    }
+}
+
+@media (max-width: 640px ) {
+    .navbar{
+        font-size: .8rem;
+    }
+
+    .userPhoto{
+        height: 25px;
+    }
+
+    .titulo{
+        font-size: 1.3;
+    }
+
+    
+}
+
+@media (max-width: 540px ) {
+
+    .swipper{
+        width: 75%;
+    }
+    .titleTag{
+        font-size: 1.5rem;
+    }
+    
+
+    .titulo{
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (max-width: 570px ) {
+
+    .navbar{
+        font-size: .8rem;
+    }
+
+    .titulo{
+        display:inline;
+        font-size: 1rem;
+    }
+
+    .nav-link{
+        padding-right: 2px;
+    } 
+
+}
+@media (max-width: 500px ) {
+    .titulo{
+        font-size: 1rem;
+    }
+    .navbar{
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 435px ) {
+    .titulo{
+        display: none;
+    }
+}
+
+@media (max-width: 360px ) {
+    .titulo{
+        display: none;
+    }
+    .navbar{
+        font-size: .6rem;
+    }
+
+    .navbar button{
+        padding: 0;
+    }
+
+    .userPhoto{
+        height: 20px;
+    }
+    .swipper{
+        width: 100%;
+    }
+}
+
+@media (max-width: 340px ) {
+    .titulo{
+        display: none;
+    }
+    .navbar{
+        font-size: .4rem;
+    }
+
+    .navbar button{
+        padding: 0;
+    }
+
+    .userPhoto{
+        height: 20px;
+    }
+    
+.navbar .nav-link{
+    padding: .3rem;
+    }
+
+}

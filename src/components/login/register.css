@@ -1,0 +1,138 @@
+.contain{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    background-color: #000;
+    width: 40%;
+    height: 100%;
+    
+    
+}
+
+
+.sidenavL{
+    background-image: url('../../img/register.jpg');
+    object-fit: cover;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    padding:12%;
+}
+
+@media (max-width: 730px ) {
+    .contain{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
+
+
+    .mainL{
+        height: 70%;
+        width: 100%;
+        font-size: .6rem;
+    }
+
+
+    .sidenavL{
+        height: 30%;
+        width: 100%;
+        font-size: .9rem;
+        text-align: center;
+    }
+    .tituloL{
+        font-size: 1.2rem;
+    }
+
+    .mainL button{
+        font-size: .8rem;
+    }
+}
+
+
+@media (max-width: 450px ) {
+
+    .sidenav{
+        padding: 0%;
+        text-align: center;
+
+    }
+    .sidenav .tituloL{
+        font-size: .8rem;
+    }
+
+    .sidenav p{
+        font-size: .8rem;
+    }
+
+    .mainL button{
+        font-size: .6rem;
+    }
+
+    
+}
+/* 
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+} */
