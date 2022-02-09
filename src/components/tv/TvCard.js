@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { apiConfig } from '../../api/apiConfig';
 import '../movies/style.css';
 
+import defaultImage from '../../img/noResults.png';
+
 export const TvCard = ({ id,title,name, backdrop_path,poster_path}) => {
     const navigate=useNavigate();
 
@@ -27,7 +29,7 @@ export const TvCard = ({ id,title,name, backdrop_path,poster_path}) => {
                 </div> */}
 
                 <img className='card-img-top' style={{height:'20rem' }} 
-                    src={apiConfig.originalImage(poster_path)} alt={name} />
+                    src={!!poster_path? apiConfig.originalImage(poster_path) :defaultImage}  alt={name} />
 
                 <div className="card-body ">
                     <h5 className='card-title'>{  title }</h5>

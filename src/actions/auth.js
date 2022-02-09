@@ -1,6 +1,6 @@
 import { firebase, googleAuthProvider } from "../firebase/fireConfig";
 import { types } from "../types/type";
-import { loadingFinish, startLoading } from "./ui";
+import { loadingFinish, logoutUi, startLoading } from "./ui";
 import Swal from 'sweetalert2';
 
 
@@ -103,6 +103,7 @@ export const startLogout = ()=>{
         localStorage.clear();
         await firebase.auth().signOut();
         dispatch(logOut());
+        dispatch(logoutUi());
     }
 }
 

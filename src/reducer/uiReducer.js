@@ -19,7 +19,14 @@ const initState = {
     },
     tv:{
         page:1
+    }, 
+    SearchMovie:{
+        page:1
     },
+    SearchTv:{
+        page:1
+    },
+
     loading:true
 
 }
@@ -58,18 +65,83 @@ switch (action.type) {
             page:state.tv.page-1
         }
     }
+    ////////////////////////////////////////////////////
+    case types.uiSearchMovieNext:
+    return{
+        ...state,
+        SearchMovie:{
+            page:state.SearchMovie.page+1
+        }
+    }
+
+    case types.uiSearchMoviePrev:
+    return{
+        ...state,
+        SearchMovie:{
+            page:state.SearchMovie.page-1
+        }
+    }
+
+    case types.uiSearchTVNext:
+    return{
+        ...state,
+        SearchTv:{
+            page:state.SearchTv.page+1
+        }
+    }
+
+    case types.uiSearchTVPrev:
+    return{
+        ...state,
+        SearchTv:{
+            page:state.SearchTv.page-1
+        }
+    }
+
+    case types.uiSearchMovieReset:
+    return{
+        ...state,
+        SearchMovie:{
+            page:1
+        }
+    }
+
+    case types.uiSearchTVReset:
+    return{
+        ...state,
+        SearchTv:{
+            page:1
+        }
+    }
 
     case types.uiStartLoading:
-            return{
-                ...state,
-                loading:true
-            }
+    return{
+        ...state,
+        loading:true
+    }
+
+    case types.uiLogout:
+    return{
+        ...state,
+        movie:{
+            page:1
+        },
+        tv:{
+            page:1
+        }, 
+        SearchMovie:{
+            page:1
+        },
+        SearchTv:{
+            page:1
+        }
+    }
 
     case types.uiFinishLoading:
-        return{
-            ...state,
-            loading:false
-        }
+    return{
+        ...state,
+        loading:false
+    }
 
     default:
     return state;

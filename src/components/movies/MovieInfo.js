@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom';
 import { apiConfig } from '../../api/apiConfig';
 import { useFetchMovie } from '../../hooks/useFetchMovie';
 
+import defaultImage from '../../img/noResults.png';
+import defaultBackground from '../../img/notFound.jpg';
+
 export const MovieInfo = () => {
 
 
@@ -14,8 +17,7 @@ export const MovieInfo = () => {
         console.log(results);
     }
 
-    if(data.backdrop_path===null)
-    data.backdrop_path= data.poster_path;
+
     
     if(data === undefined || results === undefined || data===[])
         return <div className='d-flex justify-content-center mt-5'>
@@ -35,16 +37,19 @@ return (
                     opacity:'.5'
 
                 }} > */}
-        <img className='fondoMovie' src={apiConfig.originalImage(data.backdrop_path) } 
+        <img className='fondoMovie' src={!!data.backdrop_path ? apiConfig.originalImage(data.backdrop_path) : defaultBackground } 
                 alt={data.original_title}
                 style={{ width:'100%',opacity:'.4'}} />
 
         <div className=' text-white texto-encima' >
 
             <div className='texto-izquierda'>
-            <img src={apiConfig.w500(data?.poster_path)} 
-                    style={{width:'262px', height:'393px'}}
+            {
+                !!data.poster_path &&
+                <img src={apiConfig.w500( data.poster_path) } 
+                style={{width:'262px', height:'393px'}}
                 alt={data?.original_title}/>
+            }    
             </div>
 
             <div className='texto-derecha'>
@@ -62,11 +67,21 @@ return (
                 
                 <span className='mt-3'> <i className="far fa-star"></i> {data.vote_average} </span>
 
-                { results!==undefined  && 
-                <center>
-                    <a className='btn btn-outline-light mt-2 ' target='_blank'  href={results.GB?.link ? results.GB?.link : results.US?.link}  > Start </a>
-                    {/* href={results.GB.GB.link} */}
-                </center> 
+                {  Object.values(results).length>0
+                ?
+                    <center>
+                        <a className='btn btn-outline-light mt-2 ' target='_blank'  href={results.GB?.link ? results.GB?.link : results.US?.link}  > Start </a>
+                        {/* href={results.GB.GB.link} */}
+                    </center> 
+                :
+                    <center>
+                        {
+                            !!data.homepage &&
+                            <a className='btn btn-outline-light mt-2 ' target='_blank'  href={data.homepage}  > More... </a>
+                        }
+                        
+                    </center> 
+
                 }
 
             </div>

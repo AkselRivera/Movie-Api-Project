@@ -1,6 +1,7 @@
 import React from 'react';
 import {  useNavigate,  } from 'react-router-dom';
 import { apiConfig } from '../../api/apiConfig';
+import defaultImage from '../../img/noResults.png';
 import './style.css';
 
 export const MovieCard = ({id, title, poster_path, name, original_title}) => {
@@ -27,7 +28,7 @@ const handleClick=()=>{
                 </div> */}
 
                 <img className='card-img-top' style={{objectFit:'cover', height:'25rem' }} 
-                        src={apiConfig.originalImage(poster_path)} alt={title} />
+                        src={!!poster_path ? apiConfig.originalImage(poster_path) : defaultImage } alt={title} />
 
                 <div className="card-body ">
                     <h5 className='card-title'>{  title }</h5>

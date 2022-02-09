@@ -81,10 +81,10 @@ return (
                                 value={password}
                                 onChange={handleInputChange}/>
                     </div>
-                    <div className=' d-flex justify-content-center'>
+                    <div className=' d-flex justify-content-center '>
 
-                        <button type="submit" className="btn btn-outline-primary me-2" >Login</button>
-                        <button type="button" className="btn btn-outline-secondary " onClick={handleRegister}>Sign up</button>
+                        <button type="submit" className="btn btn-outline-primary me-2 mt-2" >Login</button>
+                        <button type="button" className="btn btn-outline-secondary mt-2" onClick={handleRegister}>Sign up</button>
                     
                     </div>
                     <div className='row'></div>

@@ -6,6 +6,16 @@ a:hover{
  cursor: pointer;
 }
 
+input[type='text']:focus{
+    box-shadow: none;
+    border-bottom: 1px solid grey !important;
+}
+
+input[type='password']:focus{
+    box-shadow: none;
+    border-bottom: 1px solid grey !important;
+}
+
 .navbar{
     font-size: 1.3rem;
 }
