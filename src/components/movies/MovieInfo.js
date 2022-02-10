@@ -23,7 +23,7 @@ export const MovieInfo = () => {
                 </div>
     else
 return (
-    <div className='movieBack'>
+    <div className='movieBack animate__animated animate__fadeIn'>
     {/* <div  style={{
                     backgroundImage:`url(${apiConfig.originalImage(data.backdrop_path)})`,
                     backgroundAttachment:'srcoll',
@@ -66,14 +66,14 @@ return (
                 {  Object.values(results).length>0
                 ?
                     <center>
-                        <a className='btn btn-outline-light mt-2 ' target='_blank'  href={results.GB?.link ? results.GB?.link : results.US?.link}  > Start </a>
+                        <a className='btn btn-outline-light mt-2 ' target='_blank' rel='noreferrer'  href={results.GB?.link ? results.GB?.link : results.US?.link}  > Start </a>
                         {/* href={results.GB.GB.link} */}
                     </center> 
                 :
                     <center>
                         {
                             !!data.homepage &&
-                            <a className='btn btn-outline-light mt-2 ' target='_blank'  href={data.homepage}  > More... </a>
+                            <a className='btn btn-outline-light mt-2 ' target='_blank' rel='noreferrer' href={data.homepage}  > More... </a>
                         }
                         
                     </center> 

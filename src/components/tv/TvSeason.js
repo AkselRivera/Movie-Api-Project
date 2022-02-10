@@ -1,14 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { apiConfig } from '../../api/apiConfig';
 import '../movies/style.css';
 
 export const TvSeason = ({ id,air_date,name, overview,episode_count,poster_path,backdrop_path}) => {
-    const navigate=useNavigate();
-
-    const handleClickTv =()=>{
-        // navigate(`/tv/${id}`);
-    }
 
     if(poster_path===null)
         poster_path=backdrop_path;
@@ -17,8 +11,7 @@ export const TvSeason = ({ id,air_date,name, overview,episode_count,poster_path,
     
     <div className='col'>
         {/* <div className="conta"> */}
-            <div className='card text-center h-100 text-white bg-dark mt-2'
-                onClick={handleClickTv}>
+            <div className='card text-center h-100 text-white bg-dark mt-2'>
 
                 {/* <div className="overlay">
                     <div className="text">{overview}</div>

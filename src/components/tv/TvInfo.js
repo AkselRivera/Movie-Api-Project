@@ -24,7 +24,7 @@ export const TvInfo = () => {
     else
 return (
     <>
-    <div className='movieBack'>
+    <div className='movieBack animate__animated animate__fadeIn'>
     {/* <div  style={{
         backgroundImage:`url(${apiConfig.originalImage(data.backdrop_path)})`,
         backgroundAttachment:'srcoll',
@@ -68,7 +68,7 @@ return (
 
                 { data!==undefined   && 
                 <center>
-                    <a className='btn btn-outline-light mt-2 ' target='_blank'  href={data.homepage}  > Start </a>
+                    <a className='btn btn-outline-light mt-2 ' target='_blank' rel='noreferrer'  href={data.homepage}  > Start </a>
                     {/* href={results.GB.GB.link} */}
                 </center> 
                 }

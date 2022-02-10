@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {
     BrowserRouter,
     Routes,
     Route,
-    Navigate,
-    useNavigate
   } from "react-router-dom";
 import { Login } from '../components/login/Login';
 import { DashboardRoutes } from './DashboardRoutes';

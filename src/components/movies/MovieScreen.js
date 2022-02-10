@@ -29,7 +29,7 @@ function MovieScreen() {
   },[search, movie.page, SearchMovie.page, dispatch])
   
   const data= useFetch(url ) ;
-
+  
   const handleIncrement=()=>{
     window.scrollTo(0,0);
     dispatch( movieNext() );
@@ -84,20 +84,23 @@ function MovieScreen() {
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-1">
             
             {
-              data.data?.map ( e=> ( <MovieCard key={e.id} {...e} /> ) )
+              data.data?.length>0 
+              ?
+                data.data?.map ( e=> ( <MovieCard key={e.id} {...e} /> ) )
+              :
+                <div className='container-fluid d-flex justify-content-center animate__animated animate__fadeIn'>
+                  <div className="alert alert-info" role="alert">
+                    No results found, try it with other words
+                  </div>
+                </div>
             }
 
-            {/* {
-              (search.trim().length>0) 
-                ?
-                dataSearch.data?.map ( e=> ( <MovieCard key={e.id} {...e} /> ) )
-                :
-                data.data.map ( e=> ( <MovieCard key={e.id} {...e} /> ) )
-            } */}
 
     </div>
             {
-              (search.trim().length<=0) 
+              data.data?.length>0 
+              &&
+              ((search.trim().length<=0) 
             ?
               <div className='d-flex justify-content-center'>
 
@@ -143,7 +146,7 @@ function MovieScreen() {
                   Next
                 </button>
                 }
-              </div>
+              </div>)
             }
     </div>
 

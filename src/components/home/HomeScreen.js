@@ -103,7 +103,7 @@ return <div className='container-fluid text-white bg-dark'>
               
               {
               UpComingMovie.map ( e=> (
-                <SwiperSlide key={e.id} className='mx-1'>
+                <SwiperSlide key={e.id} className='mx-1 animate__animated animate__fadeIn'>
                   <MovieCard {...e} /> 
                 </SwiperSlide>
               ))
@@ -112,7 +112,8 @@ return <div className='container-fluid text-white bg-dark'>
             </Swiper>
       </div>
     </div>
-    <div className='my-4'>
+
+    <div className='my-4 '>
     <h1 className='titleTag'>Trending movies of the week</h1>
 
       <div className="row">
@@ -128,7 +129,7 @@ return <div className='container-fluid text-white bg-dark'>
               
               {
               trendingMovie.map ( e=> (
-                <SwiperSlide key={e.id} className='mx-1'>
+                <SwiperSlide key={e.id} className='mx-1 animate__animated animate__fadeIn'>
                   <MovieCard {...e} /> 
                 </SwiperSlide>
               ))
@@ -153,7 +154,7 @@ return <div className='container-fluid text-white bg-dark'>
               
               {
               trendingTV.map ( e=> (
-                <SwiperSlide key={e.id} className='mx-1'>
+                <SwiperSlide key={e.id} className='mx-1 animate__animated animate__fadeIn'>
                   <HomeTvCard {...e} /> 
                 </SwiperSlide>
               ))
@@ -178,7 +179,7 @@ return <div className='container-fluid text-white bg-dark'>
               
               {
               trendingPeople.map ( e=> (
-                <SwiperSlide key={e.id} className='mx-1'>
+                <SwiperSlide key={e.id} className='mx-1 animate__animated animate__fadeIn'>
                   { (e.media_type==='movie')  
                     ?
                       <MovieCard {...e}/>

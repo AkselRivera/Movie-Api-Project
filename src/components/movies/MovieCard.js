@@ -19,7 +19,7 @@ const handleClick=()=>{
     
     <div className='col'>
         {/* <div className="conta"> */}
-            <div className='card text-center h-100 text-white bg-dark' 
+            <div className='card text-center h-100 text-white bg-dark animate__animated animate__fadeIn' 
                 onClick={ handleClick }
             >
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 
@@ -91,7 +91,7 @@ return (
                     <div className='row'></div>
 
                     <div className=' d-flex justify-content-center'>
-                        <a className='link-secondary mt-1'
+                        <a className='link-secondary mt-1'  href='# '
                             onClick={handlePasswordEmail}><small>Forgot your password?</small></a>
                     </div>
                     
