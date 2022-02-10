@@ -36,15 +36,15 @@ export const Register = () => {
     const handleSubmit=(e)=>{
         e.preventDefault();
         if(name.trim().length===0){
-            console.log('name');
             Swal.fire('Ups!','Debes ingresar tu nombre','error');
             return false;
         } else if( ValidateEmail(email)){
-            console.log('email');
             Swal.fire('Ups!','Debes ingresar tu email','error');
             return false;
-        }else if( password!== password2 || password.length<5){
-            console.log('pass');
+        }else if( password.length<5){
+            Swal.fire('Ups!','Las contraseñas deben de ser de 6 caracteres','error');
+        }
+        else if( password!== password2){
             Swal.fire('Ups!','Las contraseñas deben coincidir','error');
             return false;
         }else{
