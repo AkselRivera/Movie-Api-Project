@@ -60,7 +60,7 @@ export const Register = () => {
 
 
 return (
-<div className='contain text-light'>
+<div className='contain text-light animate__animated animate__fadeIn'>
 
 <div className="sidenav sidenavL">
         <div className="login-main-text">

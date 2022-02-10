@@ -47,7 +47,7 @@ export const Login = () => {
         dispatch( startPasswordEmail(email) );
     }
 return (
-<div className='contain text-light'>
+<div className='contain text-light animate__animated animate__fadeIn'>
 
 <div className="sidenavR">
         <div className="login-main-text">
