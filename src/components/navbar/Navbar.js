@@ -36,7 +36,7 @@ const Navbar = () => {
                   <div className="d-flex justify-content-center ">
                     <span className="nav-link link-light">
                       
-                    <img src={ auth?.photo ? auth.photo : imagen} alt="" className="userPhoto me-1 "/> 
+                    <img src={ auth?.photo ? auth.photo : imagen} alt="" className="userPhoto me-1"/> 
                       {auth?.name}
                       
                       </span>
