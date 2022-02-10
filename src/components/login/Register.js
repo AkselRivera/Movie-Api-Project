@@ -5,7 +5,7 @@ import { startRegister } from '../../actions/auth';
 import useForm from '../../hooks/useForm';
 import './register.css';
 
-import {Swal} from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 
 export const Register = () => {
