@@ -21,6 +21,7 @@ return (
         <Route path="/tv" element={<TvScreen />}/>
         <Route path="/movie/:id" element={<MovieInfo />}/>
         <Route path="/tv/:id" element={<TvInfo/>}/>
+        <Route path='*' element={ <HomeScreen/> } />
     </Routes>
 
     </div>
