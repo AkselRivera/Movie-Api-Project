@@ -14,6 +14,7 @@ export const startRegister = (email,password,name)=>{
     .then(async ({user})=>{
         await user.updateProfile({ displayName: name});
         dispatch( login( user ) )
+        localStorage.setItem('token', user.refreshToken);
             dispatch(loadingFinish());
         })
         .catch(e =>{

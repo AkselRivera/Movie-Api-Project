@@ -6,7 +6,7 @@ import {MovieInfo} from '../components/movies/MovieInfo';
 import Navbar from '../components/navbar/Navbar';
 import TvScreen from '../components/tv/TvScreen';
 import { TvInfo } from '../components/tv/TvInfo';
-import {  Route, Routes } from 'react-router-dom';
+import {  Navigate, Route, Routes } from 'react-router-dom';
 
 
 
